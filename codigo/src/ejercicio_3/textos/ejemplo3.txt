@@ -1,0 +1,7 @@
+Punto   (34, 23)
+Punto (-2.3 ,3.0) HOLA HOAL HOAL
+Punto   (-420.2,32.2) sisisisis
+Punta(0.0,0.0)
+esteNoVaServir(4.3,32.45)
+Punto   (75.39,        23.18)
+Punto(73.93,        24.81);;;
