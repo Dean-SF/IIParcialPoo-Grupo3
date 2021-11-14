@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ejercicio_2;
 
-/**
- *
- * @author Esteban
- */
-public class Mamifero {
+public abstract class Mamifero {
+    protected String id;
+    protected int edad;
     
+    public Mamifero(){}
+    
+    public abstract void respirar();
+
+    public abstract void setId(String id);
+    public abstract void setEdad(int edad);
+
+    public abstract String getId();
+    public abstract int getEdad();
 }
