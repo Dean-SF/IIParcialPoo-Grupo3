@@ -7,10 +7,17 @@ public abstract class Mamifero {
     public Mamifero(){}
     
     public abstract void respirar();
-
-    public abstract void setId(String id);
-    public abstract void setEdad(int edad);
-
-    public abstract String getId();
-    public abstract int getEdad();
+    
+    public void setId(String id) {
+        this.id = id;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public String getId() {
+        return id;
+    }
+    public int getEdad() {
+        return edad;
+    }  
 }

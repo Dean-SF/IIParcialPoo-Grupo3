@@ -4,7 +4,10 @@ public abstract class Acuatico extends Mamifero{
     protected boolean tieneDorsal;
     
     public abstract void nadar();
-
-    public abstract void setTieneDorsal(boolean respiraBajoAgua);
-    public abstract boolean isTieneDorsal();
+    public void setTieneDorsal(boolean tieneDorsal) {
+        this.tieneDorsal = tieneDorsal;
+    }
+    public boolean isTieneDorsal() {
+        return tieneDorsal;
+    }
 }

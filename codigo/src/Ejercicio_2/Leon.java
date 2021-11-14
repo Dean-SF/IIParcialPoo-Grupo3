@@ -13,38 +13,14 @@ public class Leon extends Terrestre{
         return "Leon{Identificacion: "+id+", Edad: "+edad+
                 ",Tiene pesunna: "+tienePesunna+'}';
     }
-    
+
     @Override
     public void caminar() {
-        System.out.println("El leon '"+id+"' camino.");
+        System.out.println("El Leon '"+id+"' camino.");
     }
+
     @Override
     public void respirar() {
-        System.out.println("El leon '"+id+"' respiro.");
-    }
-    
-    @Override
-    public void setTienePesunna(boolean tienePesunna) {
-        this.tienePesunna = tienePesunna;
-    }
-    @Override
-    public boolean isTienePesunna() {
-        return tienePesunna;
-    }
-    @Override
-    public void setId(String id) {
-        this.id = id;
-    }
-    @Override
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-    @Override
-    public String getId() {
-        return id;
-    }
-    @Override
-    public int getEdad() {
-        return edad;
+        System.out.println("El Leon '"+id+"' respiro.");
     }
 }

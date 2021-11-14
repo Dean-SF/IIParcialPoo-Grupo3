@@ -13,38 +13,14 @@ public class Chimpance extends Terrestre{
         return "Chimpance{Identificacion: "+id+", Edad: "+edad+
                 ",Tiene pesunna: "+tienePesunna+'}';
     }
-    
+
     @Override
     public void caminar() {
-        System.out.println("El chimpance '"+id+"' camino.");
+        System.out.println("El Chimpanse '"+id+"' camino.");
     }
+
     @Override
     public void respirar() {
-        System.out.println("El chimpance '"+id+"' respiro.");
-    }
-    
-    @Override
-    public void setTienePesunna(boolean tienePesunna) {
-        this.tienePesunna = tienePesunna;
-    }
-    @Override
-    public boolean isTienePesunna() {
-        return tienePesunna;
-    }
-    @Override
-    public void setId(String id) {
-        this.id = id;
-    }
-    @Override
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-    @Override
-    public String getId() {
-        return id;
-    }
-    @Override
-    public int getEdad() {
-        return edad;
+        System.out.println("El Chimpanse '"+id+"' respiro.");
     }
 }
