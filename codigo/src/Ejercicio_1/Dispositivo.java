@@ -22,5 +22,18 @@ public abstract class Dispositivo implements Activador{
     }
     public String getId() {
         return id;
-    } 
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) {
+            return false;
+        }
+        if(obj.getClass() != this.getClass()) {
+            return false;
+        }
+        if(((Dispositivo)(obj)).id != this.id) {
+            return false;
+        }
+        return true;
+    }
 }
