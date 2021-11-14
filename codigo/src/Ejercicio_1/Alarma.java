@@ -34,4 +34,9 @@ public class Alarma extends Dispositivo{
     public String getId() {
         return id;
     } 
+
+    @Override
+    public boolean activador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

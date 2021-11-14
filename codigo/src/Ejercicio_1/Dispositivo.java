@@ -1,6 +1,6 @@
 package Ejercicio_1;
 
-public abstract class Dispositivo {
+public abstract class Dispositivo implements Activador{
     protected boolean activada;
     protected boolean activador;
     protected String id;
