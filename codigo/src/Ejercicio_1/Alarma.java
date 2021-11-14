@@ -9,34 +9,25 @@ public class Alarma extends Dispositivo{
         return "Alarma{Nombre: "+id+", Activada: "+activada+
                 ", Activador: "+activador+'}';
     }
-    
+
     @Override
-    public void setActivada(boolean activada) {
-        this.activada = activada;
+    public boolean activador(int num, String codigo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     @Override
-    public void setActivador(boolean activador) {
-        this.activador = activador;
+    public boolean activador(int num) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     @Override
-    public void setId(String id) {
-        this.id = id;
+    public boolean activador(String codgio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    @Override
-    public boolean isActivada() {
-        return activada;
-    }
-    @Override
-    public boolean isActivador() {
-        return activador;
-    }
-    @Override
-    public String getId() {
-        return id;
-    } 
 
     @Override
     public boolean activador() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+ 
 }
