@@ -2,13 +2,15 @@ package Ejercicio_1;
 
 public abstract class Dispositivo implements Activador{
     protected boolean activada;
-    protected boolean activador;
+    protected TActivador activador;
     protected String id;
+    
+    public Dispositivo(){};
 
     public void setActivada(boolean activada) {
         this.activada = activada;
     }
-    public void setActivador(boolean activador) {
+    public void setActivador(TActivador activador) {
         this.activador = activador;
     }
     public void setId(String id) {
@@ -17,11 +19,22 @@ public abstract class Dispositivo implements Activador{
     public boolean isActivada() {
         return activada;
     }
-    public boolean isActivador() {
+    public TActivador isActivador() {
         return activador;
     }
     public String getId() {
         return id;
+    }
+    public String tipoHerencia(){
+        if(this instanceof Alarma){
+            return "Alarama";
+        }else if(this instanceof CajaFuerte){
+            return "Alarama";
+        }else if(this instanceof Puerta){
+            return "Alarama";
+        }else{
+            return "Ventana";
+        } 
     }
     @Override
     public boolean equals(Object obj) {
@@ -36,4 +49,20 @@ public abstract class Dispositivo implements Activador{
         }
         return true;
     }
+    @Override
+    public boolean activador(int num, String codigo){
+        return false;
+    };
+    @Override
+    public boolean activador(int num){
+        return false;
+    };
+    @Override
+    public boolean activador(String codgio){
+        return false;
+    };
+    @Override
+    public boolean activador(){
+        return false;
+    };
 }

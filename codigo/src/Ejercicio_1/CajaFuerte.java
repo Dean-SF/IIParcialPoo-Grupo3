@@ -9,25 +9,4 @@ public class CajaFuerte extends Dispositivo{
         return "CajaFuerte{Nombre: "+id+", Activada: "+activada+
                 ", Activador: "+activador+'}';
     }
-
-    @Override
-    public boolean activador(int num, String codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean activador(int num) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean activador(String codgio) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean activador() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

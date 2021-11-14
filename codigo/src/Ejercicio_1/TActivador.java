@@ -1,5 +1,5 @@
 package Ejercicio_1;
 
 public enum TActivador {
-    SIN_ACTIVADOR, UN_ACTIVADOR, DOS_ACTIVADORES;
+    SIN_ACTIVADOR, POR_CODIGO, POR_TIMEPO, DOS_ACTIVADORES;
 }
