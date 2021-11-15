@@ -60,10 +60,14 @@ public abstract class Dispositivo implements Activador{
     }
     @Override
     public String activador(int num, String codigo){
-        if(activador!=TActivador.SIN_ACTIVADOR ){
+        if(activador!=TActivador.DOS_ACTIVADORES ){
             if(codigo.equals(contrasena)){
                 if(num>0){
-                    //Hacer la parte de tiempo.
+                    try {
+                        Thread.sleep(num*1000);
+                    } catch (InterruptedException e) {
+                        return "Error a la hora de detener el proceso";
+                    }
                     activada = true;
                     return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";
                 }
@@ -72,23 +76,27 @@ public abstract class Dispositivo implements Activador{
             return "la contrasena del dispositivo "+tipoHerencia()+" de nombre '"+id+
                     "' es diferente."; 
         }
-        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene activador.";
+        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene este activador.";
     };
     @Override
     public String activador(int num){
-        if(activador!=TActivador.SIN_ACTIVADOR ){
+        if(activador!=TActivador.POR_TIEMPO ){
             if(num>0){
-                //Hacer la parte de tiempo.
+                try {
+                    Thread.sleep(num*1000);
+                } catch (InterruptedException e) {
+                    return "Error a la hora de detener el proceso";
+                }
                 activada = true;
                 return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";
             }
             return "El tiempo debe de ser mayor a cero"; 
         }
-        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene activador.";
+        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene este activador.";
     };
     @Override
     public String activador(String codigo){
-        if(activador!=TActivador.SIN_ACTIVADOR ){
+        if(activador!=TActivador.POR_CODIGO ){
             if(codigo.equals(contrasena)){
                 activada = true;
                 return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";
@@ -96,6 +104,6 @@ public abstract class Dispositivo implements Activador{
             return "La contrasena del dispositivo "+tipoHerencia()+" de nombre '"+id+
                     "' es diferente."; 
         }
-        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene activador.";
+        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene este activador.";
     };
 }
