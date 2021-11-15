@@ -4,6 +4,7 @@ public abstract class Dispositivo implements Activador{
     protected boolean activada;
     protected TActivador activador;
     protected String id;
+    protected String contrasena;
     
     public Dispositivo(){};
 
@@ -16,22 +17,30 @@ public abstract class Dispositivo implements Activador{
     public void setId(String id) {
         this.id = id;
     }
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
     public boolean isActivada() {
         return activada;
     }
-    public TActivador isActivador() {
+    public TActivador getActivador() {
         return activador;
     }
     public String getId() {
         return id;
     }
+    public String getContrasena() {
+        return contrasena;
+    }
+
     public String tipoHerencia(){
         if(this instanceof Alarma){
             return "Alarama";
         }else if(this instanceof CajaFuerte){
-            return "Alarama";
+            return "Caja fuerte";
         }else if(this instanceof Puerta){
-            return "Alarama";
+            return "Puerta";
         }else{
             return "Ventana";
         } 
@@ -59,10 +68,6 @@ public abstract class Dispositivo implements Activador{
     };
     @Override
     public boolean activador(String codgio){
-        return false;
-    };
-    @Override
-    public boolean activador(){
         return false;
     };
 }
