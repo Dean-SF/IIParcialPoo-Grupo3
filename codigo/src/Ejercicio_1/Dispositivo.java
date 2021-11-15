@@ -36,7 +36,7 @@ public abstract class Dispositivo implements Activador{
 
     public String tipoHerencia(){
         if(this instanceof Alarma){
-            return "Alarama";
+            return "Alarma";
         }else if(this instanceof CajaFuerte){
             return "Caja fuerte";
         }else if(this instanceof Puerta){
@@ -60,7 +60,7 @@ public abstract class Dispositivo implements Activador{
     }
     @Override
     public String activador(int num, String codigo){
-        if(activador!=TActivador.DOS_ACTIVADORES ){
+        if(activador==TActivador.DOS_ACTIVADORES ){
             if(codigo.equals(contrasena)){
                 if(num>0){
                     try {
@@ -80,7 +80,7 @@ public abstract class Dispositivo implements Activador{
     };
     @Override
     public String activador(int num){
-        if(activador!=TActivador.POR_TIEMPO ){
+        if(activador==TActivador.POR_TIEMPO ){
             if(num>0){
                 try {
                     Thread.sleep(num*1000);
@@ -96,7 +96,7 @@ public abstract class Dispositivo implements Activador{
     };
     @Override
     public String activador(String codigo){
-        if(activador!=TActivador.POR_CODIGO ){
+        if(activador==TActivador.POR_CODIGO){
             if(codigo.equals(contrasena)){
                 activada = true;
                 return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";

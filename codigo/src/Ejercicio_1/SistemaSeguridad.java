@@ -81,8 +81,8 @@ public class SistemaSeguridad {
                 System.out.println("Digite el tiempo del temporizador para el dispositivo con ID: " + actual.getId());
                 int time = input.nextInt();
                 System.out.println("Digite el codigo del dispositivo con ID: " + actual.getId());
+                input.nextLine();
                 String codigo = input.nextLine();
-                
                 Thread ejecucion = new Thread(new Runnable() {
                     @Override
                     public void run() {
