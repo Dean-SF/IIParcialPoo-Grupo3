@@ -59,15 +59,43 @@ public abstract class Dispositivo implements Activador{
         return true;
     }
     @Override
-    public boolean activador(int num, String codigo){
-        return false;
+    public String activador(int num, String codigo){
+        if(activador!=TActivador.SIN_ACTIVADOR ){
+            if(codigo.equals(contrasena)){
+                if(num>0){
+                    //Hacer la parte de tiempo.
+                    activada = true;
+                    return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";
+                }
+                return "El tiempo debe de ser mayor a cero"; 
+            }
+            return "la contrasena del dispositivo "+tipoHerencia()+" de nombre '"+id+
+                    "' es diferente."; 
+        }
+        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene activador.";
     };
     @Override
-    public boolean activador(int num){
-        return false;
+    public String activador(int num){
+        if(activador!=TActivador.SIN_ACTIVADOR ){
+            if(num>0){
+                //Hacer la parte de tiempo.
+                activada = true;
+                return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";
+            }
+            return "El tiempo debe de ser mayor a cero"; 
+        }
+        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene activador.";
     };
     @Override
-    public boolean activador(String codgio){
-        return false;
+    public String activador(String codigo){
+        if(activador!=TActivador.SIN_ACTIVADOR ){
+            if(codigo.equals(contrasena)){
+                activada = true;
+                return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' se activo correctamente.";
+            }
+            return "La contrasena del dispositivo "+tipoHerencia()+" de nombre '"+id+
+                    "' es diferente."; 
+        }
+        return "El dispositivo "+tipoHerencia()+" de nombre '"+id+"' no tiene activador.";
     };
 }

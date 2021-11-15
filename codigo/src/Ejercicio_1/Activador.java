@@ -1,7 +1,7 @@
 package Ejercicio_1;
 
 public interface Activador {
-    public boolean activador(int num, String codigo);
-    public boolean activador(int num);
-    public boolean activador(String codgio);
+    public String activador(int num, String codigo);
+    public String activador(int num);
+    public String activador(String codgio);
 }
